@@ -52,7 +52,7 @@
    }
   </style>
 
- <form action="quiz.html">
+ <form action="https://mirrapika.github.io/Vikapika/quiz.html">
 
   <div class="formcontent">
    <label id="label">Please sign in</label><br>      <br>
