@@ -52,7 +52,7 @@
    }
   </style>
 
- <form action="/action_page.php">
+ <form action="quiz.html">
 
   <div class="formcontent">
    <label id="label">Please sign in</label><br>      <br>
