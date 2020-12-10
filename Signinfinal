@@ -1,0 +1,45 @@
+import csv
+name = input("Enter name:") 
+ID= int(input("Select your Id:"))
+def write(): 
+    print("Sign in here!")
+    f=open("signin1.csv","a+",newline="") 
+    swriter = csv.writer(f) 
+    swriter.writerow(["Name", "ID"]) 
+    L=[]  #defining empty list to append entered data
+    for i in range(0,1): 
+        d = [name, ID] 
+        L.append(d)
+        ch=input("Do you want to take up a quiz:(y/n)?") 
+        if ch in"nN":
+            break
+        swriter.writerows(L)
+        f.close()
+
+#defining function to search data from csv file.
+def search(): 
+    for i in range(0,1):
+        print("Let's recheck if your Id is unique before we start!")
+        f=open("signin1.csv","r") 
+        s=input("Re-enter roll no:") 
+        found=0 
+        sreader=csv.reader(f) 
+        for i in sreader:
+            for ele in i:
+                if i[1] == s:
+                    found += 1
+        print(found)
+        if found in [0,1,2]:
+            print("You are all set to take the quiz")
+            f.close()
+        else:
+            print("Id already used, please try again!")
+            write()
+            search()
+                
+write() 
+search()
+
+def userdata():
+    return name, ID
+
