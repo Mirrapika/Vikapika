@@ -1,0 +1,41 @@
+import Signinfinal as prog2
+import quiz1 as prog3
+name = prog2.userdata1()
+ID = prog2.userdata2()
+
+import mysql.connector 
+mydb = mysql.connector.connect(host="localhost",user='root', password="805811", database = "test_schema1")
+cur = mydb.cursor()
+
+print("NAME: ",name,' ',"ID: ",ID)
+
+answers = prog3.answers()
+cur.execute("Create table quizreport (question int, answer int)")
+for i in range(10):
+    query2 = "Insert into quizreport values ({},{})".format(i+1,answers[i])
+    cur.execute(query2)
+
+points = prog3.counter()
+query3 = "Create table points (VeryFrequently int, Frequently int, Rarely int, Never int, Total int)"
+cur.execute(query3)
+for ele in points: #points = [points1, points2, points3, points4, totalpoints]
+    query4 = "Insert into points values ({},{},{},{},{})".format(points[0], points[1], points[2], points[3], points[4])
+    cur.execute(query4)
+    
+print('')
+cur.execute("Select * from quizreport")
+print("PRINTING QUIZ REPORT-")
+data = cur.fetchall()
+for i in data:
+    print(i)
+
+print('')
+cur.execute("Select * from points")
+print("PRINTING POINTS SCORED-")
+data = cur.fetchall()
+for i in data:
+    print(i)
+    break
+
+cur.execute("Drop table quizreport")
+cur.execute("Drop table points")
