@@ -1,0 +1,205 @@
+import Signinfinal as prog1
+import csv
+#quiz
+print('')
+print("What does “mental health” mean to you? Is it the same as happiness? Or is it simply the absence of mental illness?")
+print("Your AI therapists will help you find out right away!!!") 
+print("INSTRUCTIONS:")
+print("1.There will be 10 questions with 4 options each.")
+print("2.You are expected to select/type the answer in the format specified in the question.")
+print("3.All questions are compulsory.")
+print("4.We request you to attempt the questions as genuinely as possible.")
+print("5.This quiz is an initiative to make you introspect and spend time for yourself.")
+print("6.The computerised results will be displayed as soon as you complete the questions.")
+print("7.We hope you accept them and maintain the spirit of the quiz.")
+print('')
+print("LET'S GET STARTED!")
+print('')
+
+L = []
+op = [1,2,3,4]
+
+def qu1():
+    #question1
+    print("Question 1:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    a = int(input("Enter your option (1/2/3/4):"))
+    if a not in op:
+        print("Please select from the options provided")
+        qu1()
+    L.append(a)
+qu1()
+print('')
+
+def qu2():
+    #question2
+    print("Question 2:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    b = int(input("Enter your option (1/2/3/4):"))
+    if b not in op:
+        print("Please select from the options provided")
+        qu2()
+    L.append(b)
+qu2()
+print('')
+
+def qu3():
+    #question3
+    print("Question 3:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    c = int(input("Enter your option (1/2/3/4):"))
+    if c not in op:
+        print("Please select from the options provided")
+        qu3()
+    L.append(c)
+qu3()
+print('')
+
+def qu4():
+    #question4
+    print("Question 4:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    d = int(input("Enter your option (1/2/3/4):"))
+    if d not in op:
+        print("Please select from the options provided")
+        qu4()
+    L.append(d)
+qu4()
+print('')
+
+def qu5():
+    #question5
+    print("Question 5:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    e = int(input("Enter your option (1/2/3/4):"))
+    if e not in op:
+        print("Please select from the options provided")
+        qu5()
+    L.append(e)
+qu5()
+print('')
+
+def qu6():
+    #question6
+    print("Question 6:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    f = int(input("Enter your option (1/2/3/4):"))
+    if f not in op:
+        print("Please select from the options provided")
+        qu6()
+    L.append(f)
+qu6()
+print('')
+
+def qu7():
+    #question7
+    print("Question 7:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    g = int(input("Enter your option (1/2/3/4):"))
+    if g not in op:
+        print("Please select from the options provided")
+        qu7()
+    L.append(g)
+qu7()
+print('')
+
+def qu8():
+    #question8
+    print("Question 8:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    h = int(input("Enter your option (1/2/3/4):"))
+    if h not in op:
+        print("Please select from the options provided")
+        qu8()
+    L.append(h)
+qu8()
+print('')
+
+def qu9():
+    #question9
+    print("Question 9:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    i = int(input("Enter your option (1/2/3/4):"))
+    if i not in op:
+        print("Please select from the options provided")
+        qu9()
+    L.append(i)
+qu9()
+print('')
+
+def qu10():
+    #question10
+    print("Question 10:")
+    print(" <ques> ")
+    print("Option 1: Very Frequently")
+    print("Option 2: Frequently")
+    print("Option 3: Rarely")
+    print("Option 4: Never")
+    j = int(input("Enter your option (1/2/3/4):"))
+    if j not in op:
+        print("Please select from the options provided")
+        qu10()
+    L.append(j)
+qu10()
+print('')
+print('----')
+print('')
+def counter():
+    totalpoints = 0
+    points1 = 0
+    points2 = 0
+    points3 = 0
+    points4 = 0
+    for i in L:
+        if i == 1:
+            points1 += 10
+            totalpoints += 10
+        elif i == 2:
+            points2 += 10
+            totalpoints +=10
+        elif i == 3:
+            points3 += 10
+            totalpoints += 10
+        elif i == 4:
+            points4 += 10
+            totalpoints += 10
+    return [points1, points2, points3, points4, totalpoints]
+
+def answers():
+    return L
